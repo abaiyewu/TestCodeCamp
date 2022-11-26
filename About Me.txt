@@ -1,0 +1,3 @@
+A well-trained and skilled software tester with experience in Manual and Automation testing using the Google office package (Drive, Excel, Documents) for test documentation; Test Plan, Test Summary Report, Test Cases and JIRA for bug reporting and issue logs, and Postman for API testing, with good understanding of QA methodologies used in the industry, the Software Development Life Cycle (SDLC) with experience working on projects in an Agile Environment.
+
+I am currectly adding to my knowledge on Java. So be ready for a lot of System Print Out 

@@ -47,9 +47,9 @@ public class SeleniumWebSignupTest {
     public void positiveSignup() throws InterruptedException {
         //Test 3. Verify that Username cannot be less than 3 characters
         //Inputting our UserName on the username field
-        driver.findElement(By.id("user_username")).sendKeys("adam55");
+        driver.findElement(By.id("user_username")).sendKeys("queen55");
         //Input Email on email field
-        driver.findElement(By.id("user_email")).sendKeys("adam55@mailinator.com");
+        driver.findElement(By.id("user_email")).sendKeys("queen55@mailinator.com");
         //Input Password
         driver.findElement(By.id("user_password")).sendKeys("passkey");
         //Click on the signup Button
@@ -140,13 +140,20 @@ public class SeleniumWebSignupTest {
         Thread.sleep(5000);
         //Test 3. Verify that Username cannot be less than 3 characters
         //Inputting our UserName on the username field
-        driver.findElement(By.id("user_username")).sendKeys("hh");
+        driver.findElement(By.id("user_username")).sendKeys("qq");
         //Input Email on email field
-        driver.findElement(By.id("user_email")).sendKeys("goal@mailinator.com");
+        driver.findElement(By.id("user_email")).sendKeys("goal22@mailinator.com");
         //Input Password
         driver.findElement(By.id("user_password")).sendKeys("happy");
         //Click on the signup Button
         driver.findElement(By.id("submit")).click();
+
+        if(driver.getCurrentUrl().contains ("https://selenium-blog.herokuapp.com/users"))
+            //pass
+            System.out.println("User has not successfully been signed in");
+        else
+            //fail
+            System.out.print("User was signed in successfully");
 
 
         Thread.sleep(5000);
@@ -156,13 +163,20 @@ public class SeleniumWebSignupTest {
     public void invalidEmail_SignUp() throws InterruptedException {
         //Test 3. Verify that Username cannot be less than 3 characters
         //Inputting our UserName on the username field
-        driver.findElement(By.id("user_username")).sendKeys("amos866");
+        driver.findElement(By.id("user_username")).sendKeys("genesis866");
         //Input Email on email field
         driver.findElement(By.id("user_email")).sendKeys("james666mailinator.com");
         //Input Password
         driver.findElement(By.id("user_password")).sendKeys("passkey");
         //Click on the signup Button
         driver.findElement(By.id("submit")).click();
+
+        if(driver.getCurrentUrl().contains ("https://selenium-blog.herokuapp.com/users"))
+            //pass
+            System.out.println("User Email provided is Invalid");
+        else
+            //fail
+            System.out.print("User Email provided is invalid ");
         Thread.sleep(5000);
     }
 
@@ -184,16 +198,23 @@ public class SeleniumWebSignupTest {
 
     //Test. 5 Verify User cannot login with password less than or equal to one character
     @Test (priority = 8)
-    public void negativeSignIn() throws InterruptedException {
+    public void negativeSignIn_shortpassword() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/div/a[1]")).click();
         Thread.sleep(5000);
         //Test 5. Verify that User cannot login with password less than or equal to one character
         //Inputting our UserName on the username field
-        driver.findElement(By.id("session_email")).sendKeys("bless08@mailinator.com");
+        driver.findElement(By.id("session_email")).sendKeys("mail@mailinator.com");
         //Input Email on email field
         driver.findElement(By.id("session_password")).sendKeys("o");
         //Click on the signIn Button
         driver.findElement(By.xpath("/html/body/div[2]/form/div[3]/div/input")).click();
+
+        if(driver.getCurrentUrl().contains ("https://selenium-blog.herokuapp.com/users"))
+            //pass
+            System.out.println("Password provided is too short");
+        else
+            //fail
+            System.out.print("Valid Password");
         Thread.sleep(5000);
     }
 
@@ -212,6 +233,13 @@ public class SeleniumWebSignupTest {
         driver.findElement(By.id("user_password")).sendKeys("");
         //Click on the signup Button
         driver.findElement(By.id("submit")).click();
+
+        if(driver.getCurrentUrl().contains ("https://selenium-blog.herokuapp.com/users"))
+            //pass
+            System.out.println("Signup Fields cannot be blank");
+        else
+            //fail
+            System.out.print("Valid Signup Credentials");
         Thread.sleep(5000);
     }
         @AfterTest

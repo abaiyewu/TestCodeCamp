@@ -28,7 +28,7 @@ public class SeleniumWebSignupTest {
             System.out.println("Correct Webpage");
         else
             //fail
-            System.out.print("Wrong Webpage");
+            System.out.println("Wrong Webpage");
         //wait time for the page to load
         Thread.sleep(5000);
 
@@ -47,9 +47,9 @@ public class SeleniumWebSignupTest {
     public void positiveSignup() throws InterruptedException {
         //Test 3. Verify that Username cannot be less than 3 characters
         //Inputting our UserName on the username field
-        driver.findElement(By.id("user_username")).sendKeys("queen55");
+        driver.findElement(By.id("user_username")).sendKeys("able95");
         //Input Email on email field
-        driver.findElement(By.id("user_email")).sendKeys("queen55@mailinator.com");
+        driver.findElement(By.id("user_email")).sendKeys("able55@mailinator.com");
         //Input Password
         driver.findElement(By.id("user_password")).sendKeys("passkey");
         //Click on the signup Button
@@ -61,7 +61,7 @@ public class SeleniumWebSignupTest {
             System.out.println("Correct Loginpage");
         else
             //fail
-            System.out.print("Wrong Loginpage");
+            System.out.println("Wrong Loginpage");
         Thread.sleep(5000);
     }
 
@@ -79,7 +79,7 @@ public class SeleniumWebSignupTest {
                     System.out.println("User1 Item Verified");
                 else
                     //fail
-                    System.out.print("User1 Item Not Verified");
+                    System.out.println("User1 Item Not Verified");
 
         Thread.sleep(5000);
     }
@@ -97,7 +97,7 @@ public class SeleniumWebSignupTest {
             System.out.println("Correct ListItemPage");
         else
             //fail
-            System.out.print("Wrong ItemListPage");
+            System.out.println("Wrong ItemListPage");
         Thread.sleep(5000);
     }
 
@@ -113,7 +113,7 @@ public class SeleniumWebSignupTest {
             System.out.println("Correct User1Page");
         else
             //fail
-            System.out.print("Wrong User1Page");
+            System.out.println("Wrong User1Page");
         Thread.sleep(5000);
     }
 
@@ -130,7 +130,7 @@ public class SeleniumWebSignupTest {
             System.out.println("Correct LogoutPage");
         else
             //fail
-            System.out.print("Wrong LogoutPage");
+            System.out.println("Wrong LogoutPage");
     }
 
     //Test 3. Verify that user cannot SignUp with Username less than 3 characters
@@ -140,9 +140,9 @@ public class SeleniumWebSignupTest {
         Thread.sleep(5000);
         //Test 3. Verify that Username cannot be less than 3 characters
         //Inputting our UserName on the username field
-        driver.findElement(By.id("user_username")).sendKeys("qq");
+        driver.findElement(By.id("user_username")).sendKeys("az");
         //Input Email on email field
-        driver.findElement(By.id("user_email")).sendKeys("goal22@mailinator.com");
+        driver.findElement(By.id("user_email")).sendKeys("image32@mailinator.com");
         //Input Password
         driver.findElement(By.id("user_password")).sendKeys("happy");
         //Click on the signup Button
@@ -153,7 +153,7 @@ public class SeleniumWebSignupTest {
             System.out.println("User has not successfully been signed in");
         else
             //fail
-            System.out.print("User was signed in successfully");
+            System.out.println("User was signed in successfully");
 
 
         Thread.sleep(5000);
@@ -176,7 +176,7 @@ public class SeleniumWebSignupTest {
             System.out.println("User Email provided is Invalid");
         else
             //fail
-            System.out.print("User Email provided is Valid ");
+            System.out.println("User Email provided is Valid ");
         Thread.sleep(5000);
     }
 
@@ -193,7 +193,7 @@ public class SeleniumWebSignupTest {
             System.out.println("Correct User1Page");
         else
             //fail
-            System.out.print("Wrong Webpage");
+            System.out.println("Wrong Webpage");
     }
 
     //Test. 5 Verify User cannot login with password less than or equal to one character
@@ -214,7 +214,7 @@ public class SeleniumWebSignupTest {
             System.out.println("Password provided is too short");
         else
             //fail
-            System.out.print("Valid Password");
+            System.out.println("Valid Password");
         Thread.sleep(5000);
     }
 
@@ -239,7 +239,7 @@ public class SeleniumWebSignupTest {
             System.out.println("Signup Fields cannot be blank");
         else
             //fail
-            System.out.print("Valid Signup Credentials");
+            System.out.println("Valid Signup Credentials");
         Thread.sleep(5000);
     }
         @AfterTest

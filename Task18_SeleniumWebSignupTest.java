@@ -176,7 +176,7 @@ public class SeleniumWebSignupTest {
             System.out.println("User Email provided is Invalid");
         else
             //fail
-            System.out.print("User Email provided is invalid ");
+            System.out.print("User Email provided is Valid ");
         Thread.sleep(5000);
     }
 
